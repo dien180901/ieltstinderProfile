@@ -48,7 +48,7 @@ section {
 .bg img {
 	width: 100vw;
 	height: 100vh;
-	filter: brightness(0.7);
+	filter: brightness(0.5);
 }
 
 .rock1 {
@@ -152,7 +152,7 @@ section {
 
 .swiper-container {
 	position: absolute;
-	top: 60%;
+	top: 55%;
 	transform: translateY(-50%);
 	padding: 50px 0;
 }
@@ -210,7 +210,7 @@ section {
 }
 
 .slide-number p {
-	font-size: 40px;
+	font-size: 35px;
 	font-family: "AlphaCentauri" !important;
 	color: #fff;
 	position: relative;
@@ -235,7 +235,7 @@ section {
 	color: #fff;
 	position: relative;
 	opacity: 0.8;
-	line-height: 30px;
+	line-height: 10px;
 }
 
 .slide-detail p span {
@@ -301,9 +301,13 @@ section {
 	font-size: 2.5rem;
 }
 
-.nav div.logo a:hover {
+/* .nav div.logo a:hover {
 	color: #00e676;
-}
+	-webkit-transition: max-width 0.5s;
+	-moz-transition: max-width 0.5s;
+	transition: max-width 0.5s;
+	overflow: hidden;
+} */
 
 .nav div.main_list {
 	height: 65px;
@@ -333,10 +337,46 @@ section {
 	font-size: 1.6rem;
 }
 
-.nav div.main_list ul li a:hover {
+/* .nav div.main_list ul li a:hover {
 	color: #00e676;
+	-webkit-transition: max-width 0.5s;
+	-moz-transition: max-width 0.5s;
+	transition: max-width 0.5s;
+	overflow: hidden;
+} */
+@import url("https://fonts.googleapis.com/css?family=Barlow:800&display=swap");
+
+* {
+	box-sizing: border-box;
 }
 
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.nav div.main_list ul li a {
+	position: relative;
+	display: inline-block;
+	font-size: 2em;
+	font-weight: 800;
+	color: white;
+	overflow: hidden;
+	background: linear-gradient(to right, black, black 50%, white 50%);
+
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position 275ms ease;
+	text-decoration: none;
+}
+
+.nav div.main_list ul li a:hover {
+	background-position: 0 100%;
+	color: black;
+}
 /* Home section */
 
 .navTrigger {
@@ -1122,13 +1162,13 @@ a {
 	flex-direction: column;
 }
 .Name {
-	font-size: 3vw;
+	font-size: 6vw;
 	top: 30%;
 }
 .my-slogan {
 	font-size: 2vw;
 	height: auto;
-	top: 40%;
+	top: 50%;
 	font-family: "AlphaCentauri" !important;
 	color: #fff;
 
