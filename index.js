@@ -1,3 +1,6 @@
+// LANDING PAGE ANIMATION
+// var scene = document.getElementById("scene");
+// var parallaxInstance = new Parallax(scene);
 var TxtType = function (el, toRotate, period) {
 	this.toRotate = toRotate;
 	this.el = el;
@@ -47,6 +50,31 @@ window.onload = function () {
 	css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
 	document.body.appendChild(css);
 };
+var keys = [
+	"Mission",
+	"Structure",
+	"Trang",
+	"Thu",
+	"Liem",
+	"Long",
+	"Nhan",
+	"Member",
+];
+var slider = new Swiper(".swiper-container", {
+	// Optional parameters
+	slidesPerView: "auto",
+	spaceBetween: 150,
+	centeredSlides: true,
+	mousewheel: true,
+	pagination: {
+		el: ".planet-links",
+		clickable: true,
+		renderBullet: function (index, className) {
+			return '<div class="' + className + '">' + keys[index] + "</div>";
+		},
+	},
+});
+
 slider.on("slideChange", function () {
 	console.log("SLIDE CHANGED");
 	gsap.to(".slide-text span", 0.2, {
@@ -123,12 +151,12 @@ slider.on("slideChangeTransitionEnd", function () {
 	});
 });
 
-// gsap.to(".rockbg1", 2, {
-// 	y: 12,
-// 	repeat: -1,
-// 	yoyo: true,
-// 	delay: 0,
-// });
+gsap.to(".rockbg1", 2, {
+	y: 12,
+	repeat: -1,
+	yoyo: true,
+	delay: 0,
+});
 
 gsap.to(".swiper-slide-next .slide-text", 0, {
 	autoAlpha: 0,

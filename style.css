@@ -965,15 +965,14 @@ a {
 	top: 80px !important;
 	display: flex;
 	justify-content: center;
-}
-.member {
 	color: white;
 	line-height: 0 !important;
-	height: 20px;
+
 	font-size: 20px;
 	margin: 0;
 	margin-top: 20px;
 }
+
 .member-Name2 {
 	color: white;
 	line-height: 0 !important;
