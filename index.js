@@ -3,14 +3,14 @@ var scene = document.getElementById("scene");
 var parallaxInstance = new Parallax(scene);
 
 var keys = [
-	"Mercury",
-	"Venus",
-	"Earth",
-	"Mars",
-	"Jupiter",
-	"Saturn",
-	"Uranus",
-	"Neptune",
+	"Mission",
+	"Structure",
+	"Trang",
+	"Thu",
+	"Liem",
+	"Long",
+	"Nhan",
+	"Member",
 ];
 var slider = new Swiper(".swiper-container", {
 	// Optional parameters
@@ -137,3 +137,14 @@ $(".navTrigger").click(function () {
 	$("#mainListDiv").toggleClass("show_list");
 	$("#mainListDiv").fadeIn();
 });
+$(".hover").mouseleave(function () {
+	$(this).removeClass("hover");
+});
+document
+	.querySelector("#contact-form")
+	.addEventListener("submit", function (e) {
+		e.preventDefault();
+		e.target.elements.name.value = "";
+		e.target.elements.email.value = "";
+		e.target.elements.message.value = "";
+	});
